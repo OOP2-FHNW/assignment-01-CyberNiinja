@@ -3,13 +3,13 @@ package portfolio.investments;
 import java.util.Objects;
 
 public abstract class Investment {
-    private String titel;
+    private String title;
     private String country;
     private double singlePrice;
     private double count;
 
-    public Investment(String titel) {
-        this.titel       = titel;
+    public Investment(String title) {
+        this.title = title;
         this.country = "Schweiz";
         this.count = 1.0;
         this.singlePrice = 1.0;
@@ -25,17 +25,17 @@ public abstract class Investment {
         }
         Investment Investment = (Investment) o;
 
-        return Objects.equals(getTitel(), Investment.getTitel());
+        return Objects.equals(getTitle(), Investment.getTitle());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getTitel());
+        return Objects.hash(getTitle());
     }
 
     // all getters and setters according to conventions
-    public String getTitel() {
-        return titel;
+    public String getTitle() {
+        return title;
     }
 
     public double getSinglePrice() {
